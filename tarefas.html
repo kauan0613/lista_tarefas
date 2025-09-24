@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lista de Tarefas</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="task-body">
+
+<!-- =============================
+CONTAINER PRINCIPAL
+================================== -->
+
+<div id="task-container">
+
+<!-- =============================
+BOAS-VINDAS DO USUÁRIO
+================================== -->
+
+<h1 id="welcome"></h1> <!-- preenchido via JS -->
+
+<!-- =============================
+INPUT DE NOVA TAREFA
+================================== -->
+
+<div class="input-area">
+      <input type="text" id="tarefa" placeholder="Digite sua tarefa..."> <!-- escrever tarefa -->
+      <button id="addBt">Adicionar</button> <!-- botão para adicionar -->
+</div>
+
+<!-- =============================
+BOTÕES DE GESTÃO
+================================== -->
+    <div class="buttons">
+      <button id="rmvBt">Remover concluídas</button> <!-- remove tarefas feitas -->
+      <button id="clBt">Limpar tudo</button> <!-- limpa toda lista -->
+    </div>
+
+<!-- =============================
+LISTA DE TAREFAS
+================================== -->
+
+    <ul id="task-list"></ul>
+
+<!-- =============================
+TOAST (POP-UP DE MENSAGENS)
+================================== -->
+
+    <div id="toast"></div>
+</div>
+
+<!-- =============================
+SCRIPT PRINCIPAL
+================================== -->
+<script src="script.js"></script>
+</body>
+</html>

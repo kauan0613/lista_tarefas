@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Boas-vindas</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body class="login-body">
+<!-- =============================
+CONTAINER DE LOGIN
+============================= -->
+<div id="login-container">
+
+<!-- =============================
+TÍTULO
+============================= -->
+<h1>Bem-vindo à sua Lista de Tarefas!</h1>
+
+<!-- =============================
+INPUT DE NOME
+============================= -->
+<input type="text" id="user" placeholder="Qual o seu nome?" />
+
+<!-- =============================
+BOTÃO ENTRAR
+============================= -->
+<button id="loginBtn">Entrar</button>
+</div>
+
+<!-- =============================
+SCRIPT DE LOGIN
+============================= -->
+    <script>
+      document
+        .getElementById("loginBtn")
+        .addEventListener("click", function () {
+          const userName = document.getElementById("user").value.trim(); // pega valor do input
+
+          if (userName) {
+            localStorage.setItem("userName", userName); // salva no LocalStorage
+            const encodedName = encodeURIComponent(userName); // codifica caracteres especiais
+            window.location.href = `tarefas.html?user=${encodedName}`; // redireciona para tarefas
+          } else {
+            alert("Por favor, insira seu nome."); // alerta caso esteja vazio
+          }
+        });
+    </script>
+  </body>
+</html>
