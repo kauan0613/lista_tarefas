@@ -41,7 +41,7 @@ SCRIPT DE LOGIN
           if (userName) {
             localStorage.setItem("userName", userName); // salva no LocalStorage
             const encodedName = encodeURIComponent(userName); // codifica caracteres especiais
-            window.location.href = `tarefas.html?user=${encodedName}`; // redireciona para tarefas
+            window.location.href = `index2.html?user=${encodedName}`; // redireciona para tarefas
           } else {
             alert("Por favor, insira seu nome."); // alerta caso esteja vazio
           }
